@@ -12,28 +12,8 @@
 	alt="GliciniTrasta.jpg non è in questa cartella">
 </p>
 
-
-import requests
-import base64
-
-with open("GliciniTrasta.jpg", "rb") as f:
-    encoded = base64.b64encode(f.read()).decode("utf-8")
-
-payload = {
-    "filename": "GliciniTrasta.jpg",
-    "content_type": "image/jpeg",
-    "data": encoded
-}
-
-r = requests.post("https://api.esempio.com/upload", json=payload)
-print(r.status_code, r.text)
-
 <p></p>
 <hr />
-
-<img src="data:image/jpeg;base64,LA_TUA_STRINGA_BASE64_QUI" alt="Immagine non presente">
-
-
 
 <hr />
 <p>&nbsp;</p>
