@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interscambio...</title>
+</head>
+<body>
+<p><pre>Edizione del 15/01/2026<span style="color:blue;font-size: 2em;font-weight:bold">  Prendi/metti quello che ti serve</span>
+</pre></p>
+<p>
+<img
+	src="GliciniTrasta.jpg"
+	alt="GliciniTrasta.jpg non è in questa cartella">
+</p>
+
+
+import requests
+import base64
+
+with open("GliciniTrasta.jpg", "rb") as f:
+    encoded = base64.b64encode(f.read()).decode("utf-8")
+
+payload = {
+    "filename": "GliciniTrasta.jpg",
+    "content_type": "image/jpeg",
+    "data": encoded
+}
+
+r = requests.post("https://api.esempio.com/upload", json=payload)
+print(r.status_code, r.text)
+
+<p></p>
+<hr />
+
+<img src="data:image/jpeg;base64,LA_TUA_STRINGA_BASE64_QUI" alt="Immagine non presente">
+
+
+
+<hr />
+<p>&nbsp;</p>
+
+<p><b><a href="https://drive.google.com/drive/u/0/folders/1U_xYY9J_6xBAN_m5AJJGjXZ5frMKhzmL">Fracca qui</a></b></p>
+
+<script>
+<h1>JavaSritp Loops</h1>
+<h2>The do...while Loop</h2>
+
+<p id="demo"></p>
+
+let text = ""
+let i = 0;
+
+do {
+  text += "<br>The number is " + i;
+  i++;
+}
+while (i < 10);  
+
+document.getElementById("demo").innerHTML = text;
+
+</script>
+</body>
+</html>
+
+
